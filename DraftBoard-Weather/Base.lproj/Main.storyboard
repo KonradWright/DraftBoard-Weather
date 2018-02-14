@@ -51,11 +51,11 @@
                                                 <rect key="frame" x="98" y="37" width="182" height="182"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="It鳠Anyone鳠Game" translatesAutoresizingMaskIntoConstraints="NO" id="gTs-tm-TDu" userLabel="circleLbl1">
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="It鳠Anyone鳠Game" translatesAutoresizingMaskIntoConstraints="NO" id="gTs-tm-TDu" userLabel="circleLbl1">
                                                 <rect key="frame" x="0.0" y="107" width="375" height="13"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Create a lineup" translatesAutoresizingMaskIntoConstraints="NO" id="DuO-Iu-3eg" userLabel="circleLbl2">
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Create a lineup" translatesAutoresizingMaskIntoConstraints="NO" id="DuO-Iu-3eg" userLabel="circleLbl2">
                                                 <rect key="frame" x="0.0" y="131" width="375" height="8"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -63,7 +63,24 @@
                                                 <rect key="frame" x="114" y="145" width="110" height="22"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="Down Arrow"/>
+                                                <connections>
+                                                    <action selector="circleBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WKV-s4-A0u"/>
+                                                </connections>
                                             </button>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No City Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81N-zT-3Vr" userLabel="cityLbl">
+                                                <rect key="frame" x="107" y="102" width="163" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No City Found" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOs-dE-6y5" userLabel="weatherLbl">
+                                                <rect key="frame" x="106" y="125" width="163" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -130,6 +147,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="circleBtn" destination="66b-Vw-QzK" id="eLV-IV-aeU"/>
+                        <outlet property="cityLbl" destination="81N-zT-3Vr" id="6zS-Ct-i5c"/>
+                        <outlet property="glow1" destination="Bhy-ie-1dN" id="sDK-lq-jGO"/>
+                        <outlet property="glow2" destination="jPQ-ep-ndY" id="CtO-NL-Df2"/>
+                        <outlet property="screen0" destination="wPe-lU-g9t" id="0Ke-71-Gqc"/>
+                        <outlet property="weatherLbl" destination="cOs-dE-6y5" id="oNs-42-HSm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
