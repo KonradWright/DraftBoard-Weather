@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     let myGroup = DispatchGroup()
     @IBOutlet weak var cityLbl: UILabel!
     @IBOutlet weak var weatherLbl: UILabel!
+    @IBOutlet weak var screen1: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
         self.circleBtn.isHidden = false
         self.cityLbl.isHidden = false
         self.weatherLbl.isHidden = false
+        
         
         //Load in Weather API
         let weather = WeatherGetter()
@@ -52,12 +54,14 @@ class ViewController: UIViewController {
                 })
             }
         }
+        
     }
 
     //Button function to go to next screen
     @IBAction func circleBtnPressed(_ sender: Any) {
         UIView.animate(withDuration: 1.5, animations: {
             self.screen0.alpha = 0.0
+            self.screen1.alpha = 1.0
         })
     }
     
