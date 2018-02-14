@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var cityLbl: UILabel!
     @IBOutlet weak var weatherLbl: UILabel!
     @IBOutlet weak var screen1: UIView!
+    @IBOutlet weak var StackCard: UIView!
+    @IBOutlet weak var cardBtn: UIButton!
+    var isFlipped = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +42,12 @@ class ViewController: UIViewController {
         weather.getWeather(city:"Paso%20Robles")
         
         //Once loaded in, animate glow and button into view
-        while weather.weatherIsReady == false {
+        var myFlag = true
+        while myFlag {
             myGroup.enter()
             if (weather.weatherIsReady == true) {
                 myGroup.leave()
+                myFlag = false
                 cityLbl.text = "Paso Robles"
                 weatherLbl.text = weather.weatherConditions
                 UIView.animate(withDuration: 1.5, animations: {
@@ -63,6 +68,32 @@ class ViewController: UIViewController {
             self.screen0.alpha = 0.0
             self.screen1.alpha = 1.0
         })
+    }
+    
+    @IBAction func cardBtnPressed(_ sender: Any) {
+        print("Pressed")
+        let image = UIImage(named: "Screen2")
+        let image2 = UIImage(named: "Screen3")
+        if (self.cardBtn.image(for: .normal) == image) {
+            self.cardBtn.setImage(image2, for: .normal)
+            UIView.transition(with: self.cardBtn, duration: 0.0, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+        } else {
+            self.cardBtn.setImage(image, for: .normal)
+            UIView.transition(with: self.cardBtn, duration: 0.0, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+        }
+        if self.isFlipped {
+            self.isFlipped = false
+            self.StackCard.alpha = 0
+            self.cardBtn.alpha = 1
+            self.cardBtn.setImage(image2, for: .normal)
+            UIView.transition(with: self.cardBtn, duration: 1.5, options: .transitionFlipFromRight, animations: nil, completion: nil)
+        } else {
+            self.isFlipped = true
+            self.StackCard.alpha = 1
+            self.cardBtn.alpha = 0
+            self.cardBtn.setImage(image, for: .normal)
+            UIView.transition(with: self.cardBtn, duration: 1.5, options: .transitionFlipFromRight, animations: nil, completion: nil)
+        }
     }
     
     
