@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,144 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DraftBoard_Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG - NBA" translatesAutoresizingMaskIntoConstraints="NO" id="Hfw-wT-bbc" userLabel="Main Background">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPe-lU-g9t" userLabel="Screen-00">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Shadow" translatesAutoresizingMaskIntoConstraints="NO" id="EjX-Uw-7nB">
+                                        <rect key="frame" x="67" y="565" width="240" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="BDF-ue-F5l">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zAr-0a-uwh" userLabel="Circle">
+                                        <rect key="frame" x="0.0" y="212" width="375" height="243"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PMR" translatesAutoresizingMaskIntoConstraints="NO" id="Bhy-ie-1dN" userLabel="glow1">
+                                                <rect key="frame" x="62" y="14" width="237" height="226"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PMR copy" translatesAutoresizingMaskIntoConstraints="NO" id="jPQ-ep-ndY" userLabel="glow2">
+                                                <rect key="frame" x="83" y="-4" width="216" height="251"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 1" translatesAutoresizingMaskIntoConstraints="NO" id="loV-KE-NRh" userLabel="elipse1">
+                                                <rect key="frame" x="98" y="37" width="182" height="182"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ellipse 1 copy" translatesAutoresizingMaskIntoConstraints="NO" id="uJt-pr-AaS" userLabel="elipse2">
+                                                <rect key="frame" x="98" y="37" width="182" height="182"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="It鳠Anyone鳠Game" translatesAutoresizingMaskIntoConstraints="NO" id="gTs-tm-TDu" userLabel="circleLbl1">
+                                                <rect key="frame" x="0.0" y="107" width="375" height="13"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Create a lineup" translatesAutoresizingMaskIntoConstraints="NO" id="DuO-Iu-3eg" userLabel="circleLbl2">
+                                                <rect key="frame" x="0.0" y="131" width="375" height="8"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66b-Vw-QzK" userLabel="circleBtn">
+                                                <rect key="frame" x="114" y="145" width="110" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" image="Down Arrow"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ICO - Plus copy" translatesAutoresizingMaskIntoConstraints="NO" id="RVG-ho-xnw">
+                                        <rect key="frame" x="337" y="40" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="LFr-i8-nRD">
+                                        <rect key="frame" x="172" y="140" width="38" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lineups" translatesAutoresizingMaskIntoConstraints="NO" id="HFe-FY-TWe">
+                                        <rect key="frame" x="0.0" y="40" width="375" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="no lineups" translatesAutoresizingMaskIntoConstraints="NO" id="Qvz-hB-MhZ">
+                                        <rect key="frame" x="0.0" y="67" width="375" height="9"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="BDF-ue-F5l" firstAttribute="leading" secondItem="wPe-lU-g9t" secondAttribute="leading" id="8G6-xQ-Tla"/>
+                                    <constraint firstItem="BDF-ue-F5l" firstAttribute="top" secondItem="wPe-lU-g9t" secondAttribute="top" id="bpQ-ia-Hpc"/>
+                                    <constraint firstAttribute="trailing" secondItem="BDF-ue-F5l" secondAttribute="trailing" id="dJg-eU-LVO"/>
+                                    <constraint firstAttribute="bottom" secondItem="BDF-ue-F5l" secondAttribute="bottom" id="e0Y-y1-dUt"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7p-Km-pyi" userLabel="Tab Bar">
+                                <rect key="frame" x="0.0" y="613" width="375" height="55"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tab Bar" translatesAutoresizingMaskIntoConstraints="NO" id="B53-sR-8Tt">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="IaA-gJ-IUj"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.10196078431372549" green="0.11764705882352941" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="B53-sR-8Tt" secondAttribute="trailing" id="Mdc-NJ-UaD"/>
+                                    <constraint firstAttribute="bottom" secondItem="B53-sR-8Tt" secondAttribute="bottom" id="Rsn-Lq-VBe"/>
+                                    <constraint firstItem="B53-sR-8Tt" firstAttribute="leading" secondItem="e7p-Km-pyi" secondAttribute="leading" id="ihA-lV-1qb"/>
+                                    <constraint firstItem="B53-sR-8Tt" firstAttribute="top" secondItem="e7p-Km-pyi" secondAttribute="top" id="lRE-Jy-eVr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="e7p-Km-pyi" secondAttribute="bottom" constant="-1" id="08H-uR-DaZ"/>
+                            <constraint firstItem="e7p-Km-pyi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4wc-TP-xYT"/>
+                            <constraint firstItem="wPe-lU-g9t" firstAttribute="leading" secondItem="Hfw-wT-bbc" secondAttribute="leading" id="8ib-iF-LCV"/>
+                            <constraint firstItem="Hfw-wT-bbc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ds4-VH-z5G"/>
+                            <constraint firstItem="e7p-Km-pyi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MJ1-lc-jyQ"/>
+                            <constraint firstItem="e7p-Km-pyi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MJA-rU-gAa"/>
+                            <constraint firstItem="Hfw-wT-bbc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tq4-0t-azO"/>
+                            <constraint firstItem="wPe-lU-g9t" firstAttribute="trailing" secondItem="Hfw-wT-bbc" secondAttribute="trailing" id="UIM-0g-8o5"/>
+                            <constraint firstItem="wPe-lU-g9t" firstAttribute="top" secondItem="Hfw-wT-bbc" secondAttribute="top" id="aD9-mN-GRh"/>
+                            <constraint firstItem="Hfw-wT-bbc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="at5-nc-Y8o"/>
+                            <constraint firstItem="wPe-lU-g9t" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cs7-Wc-fiG"/>
+                            <constraint firstAttribute="bottom" secondItem="e7p-Km-pyi" secondAttribute="bottom" constant="-1" id="kF8-UM-aod"/>
+                            <constraint firstItem="Hfw-wT-bbc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ldV-H4-sju"/>
+                            <constraint firstItem="e7p-Km-pyi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sAv-6f-mos"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BG" width="784" height="1141"/>
+        <image name="BG - NBA" width="750" height="1334"/>
+        <image name="Create a lineup" width="193" height="15"/>
+        <image name="Down Arrow" width="107" height="16"/>
+        <image name="Ellipse 1" width="408" height="408"/>
+        <image name="Ellipse 1 copy" width="425" height="424"/>
+        <image name="ICO - Plus copy" width="30" height="30"/>
+        <image name="It鳠Anyone鳠Game" width="279" height="33"/>
+        <image name="Logo" width="65" height="54"/>
+        <image name="PMR" width="543" height="517"/>
+        <image name="PMR copy" width="488" height="572"/>
+        <image name="Shadow" width="750" height="68"/>
+        <image name="Tab Bar" width="750" height="102"/>
+        <image name="lineups" width="108" height="28"/>
+        <image name="no lineups" width="137" height="15"/>
+    </resources>
 </document>
