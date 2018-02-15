@@ -12,10 +12,11 @@ class WeatherGetter {
     
     private let openWeatherMapBaseURL = "http://api.openweathermap.org/data/2.5/weather"
     private let openWeatherMapAPIKey = "87e2404ee8d292175aed23920443ee3a"
-    var weatherIsReady: Bool = false
     var weatherConditions: String = "No Conditions"
     
-    func getWeather(city: String) {
+    typealias CompletionHandler = (_ success:Bool) -> Void
+    
+    func getWeather(city: String,completionHandler: @escaping CompletionHandler) {
         
         let session = URLSession.shared
         let weatherRequestURL = URL(string: "\(openWeatherMapBaseURL)?APPID=\(openWeatherMapAPIKey)&q=\(city)")!
@@ -47,7 +48,7 @@ class WeatherGetter {
                     print("JSON error description: \(jsonError.description)")
                 }
                 print(self.weatherConditions)
-                self.weatherIsReady = true
+                completionHandler(true)
             }
         }
         

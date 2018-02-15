@@ -39,15 +39,16 @@ class ViewController: UIViewController {
         
         //Load in Weather API
         let weather = WeatherGetter()
-        weather.getWeather(city:"Paso%20Robles")
+        var weatherFlag = false
+        weather.getWeather(city: "Paso%20Robles") { (success) in
+            weatherFlag = true
+        }
         
         //Once loaded in, animate glow and button into view
         var myFlag = true
         while myFlag {
             myGroup.enter()
-            if (weather.weatherIsReady == true) {
-                myGroup.leave()
-                myFlag = false
+            if (weatherFlag == true) {
                 cityLbl.text = "Paso Robles"
                 weatherLbl.text = weather.weatherConditions
                 UIView.animate(withDuration: 1.5, animations: {
@@ -57,6 +58,8 @@ class ViewController: UIViewController {
                     self.cityLbl.alpha = 1.0
                     self.weatherLbl.alpha = 1.0
                 })
+                myGroup.leave()
+                myFlag = false
             }
         }
         
